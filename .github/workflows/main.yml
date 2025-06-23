@@ -17,7 +17,7 @@ jobs:
       - name: Masking inputs
         run: |
           DOWNLOAD_URL=$(cat $GITHUB_EVENT_PATH | jq -r '.inputs.commit_message' )
-          echo "::add-mask::$DOWNLOAD_URL
+          echo "::add-mask::$DOWNLOAD_URL"
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
